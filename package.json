@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Yggdrasil09/A-Timestamp/issues"
   },
-  "homepage": "https://github.com/Yggdrasil09/A-Timestamp#readme"
+  "homepage": "https://github.com/Yggdrasil09/A-Timestamp#readme",
+  "dependencies": {
+    "nodemon": "^1.18.9"
+  }
 }

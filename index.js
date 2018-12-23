@@ -4,8 +4,8 @@ const fs = require('fs');
 const requestHandler = (req,res) => {
     if(req.url === "/")
     {
-        fs.readFile("/views/index.html","utf-8",(err,html)=>{
-            if(err)throw err;
+        fs.readFile("views/index.html","utf-8",(err,html)=>{
+            if (err)throw err;
 
             res.writeHead(200,{"Content-Type":"text/html"});
             res.end(html);
