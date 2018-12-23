@@ -1,10 +1,16 @@
 const http = require('http');
+const fs = require('fs');
 
 const requestHandler = (req,res) => {
     if(req.url === "/")
-    console.log(req.url);
+    {
+        fs.readFile("/views/index.html","utf-8",(err,html)=>{
+            if(err)throw err;
 
-    res.end("hello world");
+            res.writeHead(200,{"Content-Type":"text/html"});
+            res.end(html);
+        });
+    }
 };
 
 const server = http.createServer(requestHandler);
